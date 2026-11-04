@@ -87,15 +87,6 @@ document.getElementById('orderForm').addEventListener('submit', function(e){
  value: total,
  currency: 'PKR'
  });
-  if (typeof ttq.instance === 'function') {
-    ttq.instance('DBLLDLBC77U0QLCJSQNG').track('Purchase', {
-      content_type: 'product',
-      content_id: 'waist-shaper',
-      quantity: quantity,
-      value: total,
-      currency: 'PKR'
-    });
-  }
  }
  document.body.style.overflow='';
  if (window.location.protocol === 'file:') { history.pushState({thankYou:true},'',window.location.pathname+'?thank_you=true'); } else { window.__waistShaperOriginalPath = window.location.pathname; history.pushState({thankYou:true},'', '/thank-you'); }
