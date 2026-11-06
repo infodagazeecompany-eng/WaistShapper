@@ -92,17 +92,6 @@ document.getElementById('orderForm').addEventListener('submit', function(e){
  if(footer) footer.style.display='none';
  if(processing) processing.style.display='none';
  if(thankYou) thankYou.style.display='flex';
- // TikTok Purchase: fire once for this successful form submission.
- // The submit handler prevents repeated submits while this order is processing.
- if (typeof ttq !== 'undefined' && typeof ttq.track === 'function') {
- ttq.track('Purchase', {
- content_type: 'product',
- content_id: 'waist-shaper',
- quantity: quantity,
- value: total,
- currency: 'PKR'
- });
- }
   // Meta Pixel Purchase: fire when the thank-you screen is shown, once per order submission.
   if (!window.__metaPurchaseTracked && typeof window.fbq === 'function') {
     window.__metaPurchaseTracked = true;
